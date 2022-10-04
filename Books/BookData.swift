@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Creates a Book object to be used for the app
 let bookData = Book(image: "cover",
                     authors: "Neil Smyth",
                     title: "SwiftUI Essentials",
