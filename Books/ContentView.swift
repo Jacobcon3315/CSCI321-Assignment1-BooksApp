@@ -49,7 +49,7 @@ struct ContentView: View {
                         }
                 }
                 
-                Text("Buy for \(book.price)")
+                Text("Buy for $\(book.price, specifier: "%.2f")")
                     .font(.system(size: 14))
                     .foregroundColor(.white)
                     .padding(10)
