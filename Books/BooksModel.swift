@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Creates a struct to be used for storing the variables needed to be displayed
 struct Book: Identifiable {
     let id = UUID()
     var image: String
