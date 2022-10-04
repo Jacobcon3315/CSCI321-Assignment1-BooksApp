@@ -40,23 +40,13 @@ struct ContentView: View {
                     .frame(width: 300)
                 
                 HStack(spacing: 30) {
-                    Text(book.categories[0])
-                        .font(.system(size: 14))
-                        .padding(5)
-                        .overlay(RoundedRectangle(cornerRadius: 100)
-                        .stroke(.black, lineWidth: 2))
-                    
-                    Text(book.categories[1])
-                        .font(.system(size: 14))
-                        .padding(5)
-                        .overlay(RoundedRectangle(cornerRadius: 100)
-                        .stroke(.black, lineWidth: 2))
-                    
-                    Text(book.categories[2])
-                        .font(.system(size: 14))
-                        .padding(5)
-                        .overlay(RoundedRectangle(cornerRadius: 100)
-                        .stroke(.black, lineWidth: 2))
+                    ForEach(book.categories, id: \.self) {
+                        Text("\($0)")
+                            .font(.system(size: 14))
+                            .padding(5)
+                            .overlay(RoundedRectangle(cornerRadius: 100)
+                            .stroke(.black, lineWidth: 2))
+                        }
                 }
                 
                 Text("Buy for \(book.price)")
